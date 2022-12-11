@@ -14,7 +14,7 @@ module.exports = {
             transform: "translateY(0)",
           },
           "100%": {
-            transform: "translateY(calc(100vh + 1.5em))",
+            transform: "translateY(calc(100vh + 2em))",
           },
         },
       },
@@ -36,7 +36,7 @@ module.exports = {
         },
         ".snow__flake": {
           position: "relative",
-          top: "-1.5em",
+          top: "-2em",
           color: "#ffffff",
           "will-change": "transform"
         },
