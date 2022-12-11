@@ -6,10 +6,6 @@ export const Snow = () => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  function getRndFloat(min: number, max: number) {
-    return (Math.random() * (max - min) + min).toFixed(1);
-  }
-
   useEffect(() => {
     const snowflakes = document.querySelectorAll<HTMLElement>(".snow__flake");
 
@@ -22,6 +18,11 @@ export const Snow = () => {
 
   return (
       <div className='snow'>
+      <div className='snow__flake animate-snowfall'>﹡</div>
+      <div className='snow__flake animate-snowfall'>﹡</div>
+      <div className='snow__flake animate-snowfall'>﹡</div>
+      <div className='snow__flake animate-snowfall'>﹡</div>
+      <div className='snow__flake animate-snowfall'>﹡</div>
       <div className='snow__flake animate-snowfall'>﹡</div>
       <div className='snow__flake animate-snowfall'>﹡</div>
       <div className='snow__flake animate-snowfall'>﹡</div>
