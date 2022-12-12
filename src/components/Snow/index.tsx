@@ -1,5 +1,11 @@
 import { useEffect } from "react";
-
+import snowflake0 from '/src/assets/snowflake0.png'
+import snowflake1 from '/src/assets/snowflake1.png'
+import snowflake2 from '/src/assets/snowflake2.png'
+import snowflake3 from '/src/assets/snowflake3.png'
+import snowflake4 from '/src/assets/snowflake4.png'
+import snowflake5 from '/src/assets/snowflake5.png'
+  
 export const Snow = () => {
   const snowflakesNumber = 30;
 
@@ -18,19 +24,18 @@ export const Snow = () => {
 
   }, []);
 
-  const snowflakeTypes = []
+  const snowflakeOptions = [snowflake0, snowflake1, snowflake2, snowflake3, snowflake4, snowflake5]
+
+  const randomizedSnowflakes = []
   for (let i = 0; i < snowflakesNumber; i++){
-    snowflakeTypes.push(getRndInteger(0,5))
+    randomizedSnowflakes.push(snowflakeOptions[getRndInteger(0,5)])
   }
 
   return (
     <div className='snow'>
-      {snowflakeTypes.map((s) => (
+      {randomizedSnowflakes.map((s) => (
         <div className='snow__flake animate-snowfall'>
-          <img
-            src={`/src/assets/snowflake${s}.png`}
-            alt='﹡'
-          />
+          <img src={s} alt='﹡' />
         </div>
       ))}
     </div>
